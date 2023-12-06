@@ -9,6 +9,7 @@ import {
 } from "./postSlice";
 import { AppDispatch } from "../../app/store";
 import Post from "./Post";
+import PostForm from "./PostForm";
 
 function Posts() {
   const posts = useAppSelector(selectPosts);
@@ -28,6 +29,7 @@ function Posts() {
       <div className="card">
         <div className="card-body">
           <h3>{status}</h3>
+          <PostForm />
           {posts &&
             posts.length > 0 &&
             posts.map((post) => {
